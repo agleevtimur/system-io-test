@@ -24,14 +24,14 @@ class PurchaseRequestDTO
         $dto = new static();
 
         $dto->productId = $data['product'];
-        $dto->couponCode = $data['couponCode'];
+        $dto->couponCode = $data['couponCode'] ?? null;
         $dto->taxNumber = $data['taxNumber'];
         $dto->paymentProcessor = $data['paymentProcessor'];
 
         return $dto;
     }
 
-    public function getCouponCode(): string
+    public function getCouponCode(): ?string
     {
         return $this->couponCode;
     }

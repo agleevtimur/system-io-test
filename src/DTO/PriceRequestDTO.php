@@ -21,13 +21,13 @@ class PriceRequestDTO
         $dto = new static();
 
         $dto->productId = $data['product'];
-        $dto->couponCode = $data['couponCode'];
+        $dto->couponCode = $data['couponCode'] ?? null;
         $dto->taxNumber = $data['taxNumber'];
 
         return $dto;
     }
 
-    public function getCouponCode(): string
+    public function getCouponCode(): ?string
     {
         return $this->couponCode;
     }
