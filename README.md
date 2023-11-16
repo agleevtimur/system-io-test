@@ -1,3 +1,4 @@
+### Сделано по [ТЗ](https://github.com/systemeio/test-for-candidates)
 # Запуск проекта
 
 ```
@@ -33,6 +34,12 @@ curl --location 'http://localhost:8001/purchase' \
     "paymentProcessor": "paypal"
 }'
 ```
+# Тесты
+```
+docker exec -t -i php-system-io /bin/bash
+php bin/phpunit
+```
+
 
 # Дополнительно
 
